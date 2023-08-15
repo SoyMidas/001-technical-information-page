@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+---
+
+<Layout title="WEEEENASS">
+  <main class="flex flex-col gap-3 p-3">
+    <Section title="What is CSS?">
+      Like HTML, CSS is not a programming language. It's not a markup language
+      either. CSS is a style sheet language. CSS is what you use to selectively
+      style HTML elements. For example, this CSS selects paragraph text, setting
+      the color to red:
+      <pre>
+<code><span class="token selector">p</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code>
+</pre>
+    </Section>
+    <Section title="Basics">
+      Let's dissect the CSS code for red paragraph text to understand how it
+      works:
+      <img
+        src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+        alt="CSS p declaration color red"
+        class="w-1/2 rounded p-3 mx-auto my-0"
+        loading="lazy"
+      />
+      The whole structure is called a ruleset. (The term ruleset is often referred
+      to as just rule.) Note the names of the individual parts:
+      <dl>
+        <dt class="text-lg mb-1 mt-3 text-white">Selector</dt>
+        <dd class="ml-3 text-zinc-300">
+          This is the HTML element name at the start of the ruleset. It defines
+          the element(s) to be styled (in this example, elements). To style a
+          different element, change the selector.
+        </dd>
+        <dt class="text-lg mb-1 mt-3 text-white">Declaration</dt>
+        <dd class="ml-3 text-zinc-300">
+          This is a single rule like color: red;. It specifies which of the
+          element's properties you want to style.
+        </dd>
+        <dt class="text-lg mb-1 mt-3 text-white">Properties</dt>
+        <dd class="ml-3 text-zinc-300">
+          These are waysin which you can style an HTML element. (In this
+          example, color is a property of the elements.) In CSS, you choose
+          which properties you want to affect in the rule.
+        </dd>
+        <dt class="text-lg mb-1 mt-3 text-white">Property value</dt>
+        <dd class="ml-3 text-zinc-300">
+          To the right of the property—after the colon—there is the property
+          value. This chooses one out of many possible appearances for a given
+          property. (For example, there are many color values in addition to
+          red.)
+        </dd>
+      </dl>
+	  Note the other important parts of the syntax:
+	  <ul class="list-disc text-md ml-6 text-zinc-300/80">
+		  <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({`{}`})</li>
+		  <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+		  <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+	</ul>
+	To modify multiple property values in one ruleset, write them separated by semicolons, like this:
+	<pre class="p-3 bg-black/20 w-fit h-fit rounded mx-auto my-2">
+<code>p &#123;
+	color: red;
+	width: 500px;
+	border: 1px solid black;
+  &#125;</code></pre>
+    </Section>
+  </main>
+</Layout>

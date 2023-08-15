@@ -1,0 +1,11 @@
+---
+interface Props {
+    title: string
+}
+
+const {title} = Astro.props
+---
+<section id={title} class="text-white w-1/2 self-center">
+    <header class="text-xl"><h2>{title}</h2></header>
+    <main class="text-zinc-300 text-justify"><p><slot/></p></main>
+</section>
