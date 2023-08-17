@@ -1,15 +1,15 @@
 ---
-interface Props {
-    array: Array<any>;
-}
-
-const { array } = Astro.props
+import { SectionsData } from "../constants/index.js";
 ---
 
-<aside class="w-max h-full text-white p-2 sticky top-0">
-    <ul>
-      {array.map((header: any) => (
-        <li><a href={`#${header}`}>{header}</a></li>
-      ))}
-    </ul>
+<aside class="w-60 h-screen text-white p-2 sticky top-0 border-r-2">
+  <ul class="px-2">
+    {
+      SectionsData.map((item) => (
+        <li class="border-t-2 p-3 w-full">
+          <a href={`#${item.id}`}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
 </aside>
